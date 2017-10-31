@@ -17,7 +17,10 @@ The project is sponsored by [Synergic Partners](http://www.synergicpartners.com/
 #### Andrew C Satz  
 
 #### Janak A Jain  
-<img src="team-details/team-pics/janak-a-jain.jpg"=100x20></img>
+<img src="team-details/team-pics/janak-a-jain.jpg" =100x20></img>
+
+![](./team-details/team-pics/janak-a-jain =100x20)  
+
 <table>
   <tr>
     <td>Janak is currently an MS candidate at Columbia University's Data Science Institute. With a rich experience in market research and consulting across several categories, he wishes to explore future steps of data across industries such as marketing, smart cities and healthcare. An MBA Tech alumnus of SVKM's NMIMS, Mumbai - his work has moved along an interesting intersection of technological and managerial spaces. He knows Hindi, English, Marathi and French with qualifications of various levels.
