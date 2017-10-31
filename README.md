@@ -54,7 +54,7 @@ The project is sponsored by [Synergic Partners](http://www.synergicpartners.com/
 </table>  
 
 #### Shengyang Zhang
-<img src="team-details/team-pics/shenyang-zhang.jpg" height="150" width="150"></img>
+<img src="team-details/team-pics/shengyang-zhang.jpg" height="150" width="150"></img>
 
 <table>
   <tr>
