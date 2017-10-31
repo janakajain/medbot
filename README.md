@@ -17,9 +17,7 @@ The project is sponsored by [Synergic Partners](http://www.synergicpartners.com/
 #### Andrew C Satz  
 
 #### Janak A Jain  
-<img src="team-details/team-pics/janak-a-jain.jpg" =100x20></img>
-
-![](./team-details/team-pics/janak-a-jain =100x20)  
+<img src="team-details/team-pics/janak-a-jain.jpg" height="42" width="42"></img>
 
 <table>
   <tr>
