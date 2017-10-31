@@ -35,7 +35,7 @@ The project is sponsored by [Synergic Partners](http://www.synergicpartners.com/
 </table>  
 
 #### Johnny Galsurkar  
-<img src="team-details/team-pics/jonathan-galsurkar.jpeg" height="150" width="150"></img>
+<img src="team-details/team-pics/jonathan-galsurkar.jpeg" height="200" width="150"></img>
 
 <table>
   <tr>
