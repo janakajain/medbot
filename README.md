@@ -27,7 +27,7 @@ The project is sponsored by [Synergic Partners](http://www.synergicpartners.com/
 </table>  
 
 #### Johnny Galsurkar  
-<img src="team-details/team-pics/jonathan-galsurkar.jpg" height="150" width="150"></img>
+<img src="team-details/team-pics/jonathan-galsurkar.jpeg" height="150" width="150"></img>
 
 #### Minghong Zheng  
 <img src="team-details/team-pics/minghong-zheng.png" height="150" width="150"></img>
