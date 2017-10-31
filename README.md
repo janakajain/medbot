@@ -15,6 +15,14 @@ The project is sponsored by [Synergic Partners](http://www.synergicpartners.com/
 ## About the Team  
   
 #### Andrew C Satz  
+<img src="team-details/team-pics/andrew-satz.jpeg" height="150" width="150"></img>
+
+<table>
+  <tr>
+    <td>Andrew Satz is a Master's candidate in data science at Columbia University's School of Engineering. He comes with nearly 20 years of experience in the health insurance industry, with roles in risk management and safety. More recently, Andrew founded a data science consultancy firm focusing on the healthcare industry. Andrew is passionate about music, travel, and discovering innovative and realistic ways to utilize technology to solve the challenges of today and tomorrow.
+    </td>
+  </tr>
+</table>  
 
 #### Janak A Jain  
 <img src="team-details/team-pics/janak-a-jain.jpg" height="150" width="150"></img>
@@ -29,6 +37,13 @@ The project is sponsored by [Synergic Partners](http://www.synergicpartners.com/
 #### Johnny Galsurkar  
 <img src="team-details/team-pics/jonathan-galsurkar.jpeg" height="150" width="150"></img>
 
+<table>
+  <tr>
+    <td>Jonathan Galsurkar is a final year Master's student at Columbia University studying Data Science. His team came in first place at the 2017 Columbia Data Science Hackathon. He received his Bachelor’s degree in Computer Science and Mathematics from CUNY Hunter College. He is currently a Data Science Research intern at IBM, focusing on sentence/paragraph embedding and semantic searching techniques & applications. His main goal is to use data for social good. For fun he likes to play guitar, snowboard, and travel.
+    </td>
+  </tr>
+</table>  
+
 #### Minghong Zheng  
 <img src="team-details/team-pics/minghong-zheng.png" height="150" width="150"></img>
 <table>
@@ -39,8 +54,17 @@ The project is sponsored by [Synergic Partners](http://www.synergicpartners.com/
 </table>  
 
 #### Shengyang Zhang
+<img src="team-details/team-pics/shenyang-zhang.jpg" height="150" width="150"></img>
 
-  
+<table>
+  <tr>
+    <td>Shengyang is a graduate student at Data Science Institute, Columbia University, currently in my last semester and plan to graduate in Dec. 2017.  
+Programming Languages: Python, R, MATLAB, Java, C  
+Big Data/Cloud Technologies: Hadoop, Hive, Spark, Google Cloud Platform, AWS  
+Tools/Packages: Tensorflow, Caffe, Theano, DyNet, NLTK, Scikit-Learn, Numpy, SciPy, pandas, keras, RShiny, Git, Tableau, matplotlib  
+    </td>
+  </tr>
+</table>  
 ---  
   
 ## Feeback and Comments  
