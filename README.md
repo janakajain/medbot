@@ -17,7 +17,7 @@ The project is sponsored by [Synergic Partners](http://www.synergicpartners.com/
 #### Andrew C Satz  
 
 #### Janak A Jain  
-<img src="team-details/team-pics/janak-a-jain.jpg" height="100" width="100"></img>
+<img src="team-details/team-pics/janak-a-jain.jpg" height="150" width="150"></img>
 
 <table>
   <tr>
@@ -28,7 +28,7 @@ The project is sponsored by [Synergic Partners](http://www.synergicpartners.com/
 
 #### Johnny Galsurkar  
 #### Minghong Zheng  
-![Minghong](team-details/team-pics/minghong-zheng.jpg)
+<img src="team-details/team-pics/minghong-zheng.jpg" height="150" width="150"></img>
 <table>
   <tr>
     <td>I am very interested in applying advanced models with my business sense to do user behavior analysis. In addition, I like travelling and outdoor activities to try different things and visit as many interesting places as I can.
