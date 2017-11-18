@@ -16,7 +16,10 @@ The project is sponsored by [Synergic Partners](http://www.synergicpartners.com/
   
 Here's a sneak-peak of MediBo in action. We will update this demo video as and when we add more capabilities to it.  
   
-[MediBo Demo](https://youtu.be/sJayNZOJ1ZY)
+<div align="center">
+  <a href="https://www.youtube.com/watch?v=sJayNZOJ1ZY"><img src="https://www.youtube.com/watch?v=sJayNZOJ1ZY"></a>
+</div>
+
 ---
     
 ## About the Team  
