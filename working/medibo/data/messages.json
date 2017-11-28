@@ -1,0 +1,70 @@
+[
+	{
+		"1":{
+			"_id": 1,
+			"title": "introduction",
+			"targets": ["welcome"],
+			"intent": ["hello"],
+			"text": "👋😄 Hello! I am MediBo. Your personal medical chatbot.",
+			"entities": ["medibo","chatbot"],
+			"tags": ["hello","yourself"],
+			"weights": 
+				{	
+				"information": 0,
+				"remedy": 0,
+				"general": 1,
+				"query": 0,
+				"leadgen":0
+				}
+			},
+		"2":{
+			"_id": 2,
+			"title": "description",
+			"targets": ["welcome"],
+			"intent": ["description"],
+			"text": "I am here to help you keep you healthy by keeping a track of your 💊",
+			"entities": ["medibo","chatbot"],
+			"tags": ["medicines"],
+			"weights": 
+				{
+					"information": 0,
+					"remedy": 0,
+					"general": 1,
+					"query": 0,
+					"leadgen": 0
+				}
+			},
+	"3":{
+			"_id": 3,
+			"title": "onboarding",
+			"targets": ["onboarding","register"],
+			"intent": ["onboarding"],
+			"text": "Let's get started, shall we? 🙂",
+			"entities": ["start","begin","register"],
+			"tags": ["register","medibo"],
+			"weights": 
+				{
+					"information": 0,
+					"remedy": 0,
+					"general": 1,
+					"query": 0,
+					"leadgen":0
+				}
+		},
+	"4":{
+			"_id": 5,
+			"title": "what is your name",
+			"targets": ["demog-name"],
+			"intent": ["leadgen"],
+			"text": "They call me MediBo (🏥 + 🤖). What do they call you?",
+			"weights": 
+				{
+					"information": 0,
+					"remedy": 0,
+					"general": 1,
+					"query": 0,
+					"leadgen":1
+				}
+		}
+	}
+]
