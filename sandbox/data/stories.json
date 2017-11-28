@@ -1,0 +1,17 @@
+[
+	{
+		"welcome": {
+			"_id":1,
+			"title": "welcome",
+			"targets": ["introduction"],
+			"messages": [1,2]
+		},
+
+		"onboarding_name": {
+			"_id": 2,
+			"title": "onboarding_name",
+			"targets": ["onboarding","name"],
+			"messages": [5]
+		}
+	}
+]
