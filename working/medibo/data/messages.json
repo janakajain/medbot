@@ -52,7 +52,7 @@
 				}
 		},
 	"4":{
-			"_id": 5,
+			"_id": 4,
 			"title": "what is your name",
 			"targets": ["demog-name"],
 			"intent": ["leadgen"],
@@ -64,6 +64,66 @@
 					"general": 1,
 					"query": 0,
 					"leadgen":1
+				}
+		},
+	"5":{
+			"_id": 5,
+			"title": "what is your age",
+			"targets": ["demog-age"],
+			"intent": ["leadgen"],
+			"text": "Nice to meet you! How old are you?",
+			"weights": 
+				{
+					"information": 0,
+					"remedy": 0,
+					"general": 1,
+					"query": 0,
+					"leadgen":1
+				}
+		},
+	"6":{
+			"_id": 6,
+			"title": "what is your sex",
+			"targets": ["demog-sex"],
+			"intent": ["leadgen"],
+			"text": "How young! Last question! What is your sex?",
+			"weights": 
+				{
+					"information": 0,
+					"remedy": 0,
+					"general": 1,
+					"query": 0,
+					"leadgen":1
+				}
+		},
+	"7":{
+			"_id": 7,
+			"title": "what is your age",
+			"targets": ["demog-age"],
+			"intent": ["leadgen"],
+			"text": "Nice to meet you! How old are you?",
+			"weights": 
+				{
+					"information": 0,
+					"remedy": 0,
+					"general": 1,
+					"query": 0,
+					"leadgen":1
+				}
+		},
+	"8":{
+			"_id": 8,
+			"title": "do you have symptom",
+			"targets": ["demog-age"],
+			"intent": ["leadgen"],
+			"text": "Do you have a ",
+			"weights": 
+				{
+					"information": 0,
+					"remedy": 0,
+					"general": 0,
+					"query": 1,
+					"leadgen":0
 				}
 		}
 	}
