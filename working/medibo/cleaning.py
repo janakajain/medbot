@@ -1,9 +1,9 @@
 '''
-	============================================================================
-	||                         					  							  ||
-	||                          NLP CLEANING CODE  							  ||
-	||                         					  							  ||					
-	============================================================================
+================================================================================
+||                         					  								  ||
+||                         	 NLP CLEANING CODE  							  ||
+||                         					  								  ||
+================================================================================
 
 This package contains functionalities to clean text message text such as the
 following:
@@ -11,6 +11,9 @@ following:
 2. Bursting punctuations
 3. Spelling correction
 4. Expanding short forms
+
+
+@author: Janak A Jain
 
 '''
 

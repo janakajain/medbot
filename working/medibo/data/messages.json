@@ -15,14 +15,16 @@
 				"general": 1,
 				"query": 0,
 				"leadgen":0
-				}
-			},
+				},
+			"embed": []
+		},
+		
 		"2":{
 			"_id": 2,
 			"title": "description",
 			"targets": ["welcome"],
 			"intent": ["description"],
-			"text": "I am here to help you keep you healthy by keeping a track of your 💊",
+			"text": "I am here to keep you healthy by keeping a track of your 💊",
 			"entities": ["medibo","chatbot"],
 			"tags": ["medicines"],
 			"weights": 
@@ -32,9 +34,11 @@
 					"general": 1,
 					"query": 0,
 					"leadgen": 0
-				}
-			},
-	"3":{
+				},
+			"embed": []
+		},
+		
+		"3":{
 			"_id": 3,
 			"title": "onboarding",
 			"targets": ["onboarding","register"],
@@ -49,14 +53,18 @@
 					"general": 1,
 					"query": 0,
 					"leadgen":0
-				}
+				},
+			"embed": []
 		},
-	"4":{
+		
+		"4":{
 			"_id": 4,
-			"title": "what is your name",
-			"targets": ["demog-name"],
+			"title": "what-is-your-name",
+			"targets": ["demog","name"],
 			"intent": ["leadgen"],
 			"text": "They call me MediBo (🏥 + 🤖). What do they call you?",
+			"entities": ["medibo","call"],
+			"tags": ["name","leadgen","medibo"],
 			"weights": 
 				{
 					"information": 0,
@@ -64,14 +72,18 @@
 					"general": 1,
 					"query": 0,
 					"leadgen":1
-				}
+				},
+			"embed": []
 		},
-	"5":{
+		
+		"5":{
 			"_id": 5,
-			"title": "what is your age",
-			"targets": ["demog-age"],
+			"title": "what-is-your-age",
+			"targets": ["demog","age"],
 			"intent": ["leadgen"],
-			"text": "Nice to meet you! How old are you?",
+			"text": "Nice to meet you %s! How old are you?",
+			"entities": ["age","leadgen"],
+			"tags": ["age","leadgen"],
 			"weights": 
 				{
 					"information": 0,
@@ -79,14 +91,18 @@
 					"general": 1,
 					"query": 0,
 					"leadgen":1
-				}
+				},
+			"embed": ["name"]
 		},
-	"6":{
+		
+		"6":{
 			"_id": 6,
-			"title": "what is your sex",
-			"targets": ["demog-sex"],
+			"title": "what-is-your-sex",
+			"targets": ["demog","sex"],
 			"intent": ["leadgen"],
-			"text": "How young! Last question! What is your sex?",
+			"text": "Got it. Last question! What is your sex?",
+			"entities": ["sex","leadgen"],
+			"tags": ["register","sex","leadgen"],
 			"weights": 
 				{
 					"information": 0,
@@ -94,14 +110,18 @@
 					"general": 1,
 					"query": 0,
 					"leadgen":1
-				}
+				},
+			"embed": []
 		},
-	"7":{
+		
+		"7":{
 			"_id": 7,
-			"title": "do you have symptom",
+			"title": "do-you-have-symptom",
 			"targets": ["symptom"],
 			"intent": ["leadgen"],
-			"text": "Do you have a ",
+			"text": "Do you have any allergies I should be aware of?",
+			"entities": ["allergy","allergies"],
+			"tags": ["symptom","symptoms","allergies","allergy"],
 			"weights": 
 				{
 					"information": 0,
@@ -109,13 +129,15 @@
 					"general": 0,
 					"query": 1,
 					"leadgen":0
-				}
+				},
+			"embed": []
 		},
-	"8":{
+	
+		"8":{
 			"_id": 8,
-			"title": "common symptom",
-			"targets": ["responce"],
-			"intent": ["responce"],
+			"title": "common-symptom",
+			"targets": ["response"],
+			"intent": ["response"],
 			"text": "Your symptom is common and not one to worry about. If it persists, call your doctor.",
 			"weights": 
 				{
@@ -124,13 +146,15 @@
 					"general": 0,
 					"query": 0,
 					"leadgen":0
-				}
+				},
+			"embed": []
 		},
-	"9":{
+
+		"9":{
 			"_id": 9,
-			"title": "doctor symptom",
-			"targets": ["responce"],
-			"intent": ["responce"],
+			"title": "doctor-symptom",
+			"targets": ["response"],
+			"intent": ["response"],
 			"text": "I advise you to contact your physician. The symptoms may be serious.",
 			"weights": 
 				{
@@ -139,14 +163,16 @@
 					"general": 0,
 					"query": 0,
 					"leadgen":0
-				}
+				},
+			"embed": []
 		},
-	"10":{
+
+		"10":{
 			"_id": 10,
-			"title": "emergency symptom",
-			"targets": ["responce"],
-			"intent": ["responce"],
-			"text": "I advise you to contact 911 immediately. The symptoms may be deadly.",
+			"title": "emergency-symptom",
+			"targets": ["response"],
+			"intent": ["response"],
+			"text": "%s, I advise you to contact 911 immediately. The symptoms may be deadly.",
 			"weights": 
 				{
 					"information": 1,
@@ -154,7 +180,8 @@
 					"general": 0,
 					"query": 0,
 					"leadgen":0
-				}
+				},
+			"embed": ["name"]
 		}
 	}
 ]
