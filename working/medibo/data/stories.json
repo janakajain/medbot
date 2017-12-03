@@ -14,8 +14,8 @@
 			"title": "onboarding_name",
 			"targets": ["onboarding","name"],
 			"messages": [5],
-			"return_intent":[],
-			"return_target": []
+			"return_intent":["age"],
+			"return_target": ["age","demog"]
 		}
 	}
 ]

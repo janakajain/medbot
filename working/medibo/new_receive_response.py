@@ -21,7 +21,7 @@ phones. The various steps include:
 
 
 from flask import Flask, request, redirect, session
-from twilio.twiml.messaging_response import MessagingResponse
+from twilio.twiml.messaging_response import Message, MessagingResponse
 from twilio.twiml.voice_response import VoiceResponse
 from load import *
 from response import *
@@ -105,7 +105,11 @@ def sms_reply():
 
 		r = respond(user = u_rec, type = "story", title = "first_welcome")
 
-		resp.message(r["text"])
+		
+		for sms in r["text"]:
+			resp.message(sms)
+
+		print(r)
 
 		return str(resp)
 
