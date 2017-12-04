@@ -8,10 +8,10 @@ A user is any human who consumes the experience of the product MediBo. Specifica
 ### Chatbot  
 The artificially intelligent computer program that communicates with the users through SMS channel.
 
-###Thread  
+### Thread  
 A conversation thread (or simply a ‘thread’) is composed of one or more interactions between the user and the chatbot in a contiguous unit of time. A thread is composed of several elements such as messages, stories etc.
 
-###Message  
+### Message  
 A message is delivered as a “bubble” on the screen of the user and essentially contains some text. It also contains metadata such as intent, targets, return_intent, return_targets, tags etc.  
 
 ### Story  
