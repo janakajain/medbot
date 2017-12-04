@@ -100,7 +100,7 @@
 			"title": "what-is-your-sex",
 			"targets": ["demog","sex"],
 			"intent": ["leadgen"],
-			"text": "Got it. Last question! What is your sex?",
+			"text": "Got it. If I may ask, what is your sex?",
 			"entities": ["sex","leadgen"],
 			"tags": ["register","sex","leadgen"],
 			"weights": 
@@ -117,7 +117,7 @@
 		"7":{
 			"_id": 7,
 			"title": "do-you-have-symptom",
-			"targets": ["symptom"],
+			"targets": ["demog","allergies"],
 			"intent": ["leadgen"],
 			"text": "Do you have any allergies I should be aware of?",
 			"entities": ["allergy","allergies"],
@@ -178,6 +178,23 @@
 					"information": 1,
 					"remedy": 0,
 					"general": 0,
+					"query": 0,
+					"leadgen":0
+				},
+			"embed": ["name"]
+		},
+
+		"11":{
+			"_id": 11,
+			"title": "onboarding-complete",
+			"targets": ["demog","complete"],
+			"intent": ["complete"],
+			"text": "You're all set %s, Welcome to MediBo!",
+			"weights": 
+				{
+					"information": 1,
+					"remedy": 0,
+					"general": 1,
 					"query": 0,
 					"leadgen":0
 				},

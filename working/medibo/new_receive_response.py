@@ -25,6 +25,7 @@ from twilio.twiml.messaging_response import Message, MessagingResponse
 from twilio.twiml.voice_response import VoiceResponse
 from load import *
 from response import *
+from pprint import pprint
 import json
 import time
 import os
@@ -66,12 +67,20 @@ input_keys = ['timestamp','user_id','session_id','tags','targets','intent', \
 
 user_keys = ['name','age','sex','phone']
 
-resp = MessagingResponse()
+leadgen_keys = ["name","age","sex","allergies"]
 
+# Set the first set of targets and intent labels
+
+targets = ["welcome","onboarding","register"]
+intent = ["hello","description","onboarding","leadgen"]
+
+u_rec = dict.fromkeys(user_keys)  # Create a record for the user
 
 
 @app.route("/sms", methods = ['GET','POST'])
 def sms_reply():
+
+	resp = MessagingResponse()
 
 	
 	#--------[Get the current contextual information from global labels]--------
@@ -101,17 +110,64 @@ def sms_reply():
 	#-------------[Take the required action based on the user type]-------------
 
 	if(from_number not in users.keys()):  # If the user is a new user
-		u_rec = dict.fromkeys(user_keys)  # Create a record for the user
-
-		r = respond(user = u_rec, type = "story", title = "first_welcome")
 
 		
-		for sms in r["text"]:
-			resp.message(sms)
+		if("phone" not in u_rec):
+			u_rec["phone"] = from_number
 
-		print(r)
+
+		if("demog" in targets):       # If the targets contain "leadgen"
+
+			if("complete" in targets):
+				users[from_number] = u_rec
+				print('\n--- Leadgen complete -----\n')
+				print(users)
+
+			else:
+				for target in targets:      # Then iterate over targets and 
+						
+					if(target in leadgen_keys): # if a target is in leadgen keys
+						print('    Found target leadgen : ' + target)
+						u_rec[target] = input_text # store the leadgen value in 
+												   # in the user record
+						print(u_rec)
+
+
+		
+		# Get the response for the given set of labels
+
+		r = respond(user = u_rec, type = "story", targets = targets, intent = intent)
+
+		pprint(r)
+
+
+		if(r == None):
+			print("None response")
+
+
+		# Update the labels
+
+		intent = r["return_intent"]
+		targets = r["return_targets"]
+		tags = r["tags"]
+
+		print("---- Updated labels -----")
+		print("Intent = " + str(intent))
+		print("Targets = " + str(targets))
+
+		
+		if(r["text"] != None):
+			for sms in r["text"]:
+				if(len(r["embed"]) != 0):
+					resp.message(str(sms%tuple([u_rec[i] for i in r["embed"]])))
+				else:
+					resp.message(sms)
+		else:
+			resp.message("There seems to be some error. \n\n Sorry for the inconvenience")
+
 
 		return str(resp)
+
 
 
 

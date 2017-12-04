@@ -23,18 +23,26 @@ with open('data/stories.json') as stories_data:
 	stories = json.load(stories_data)[0]  # This is a dictionary of stories
 
 
-input_keys = ['timestamp','user_id','session_id','tags','targets','intent', \
-'text']
+input_keys = ["timestamp","user_id","session_id","tags",\
+"return_targets","return_intent","text","embed"]
 
-user_keys = ['name','age','sex','phone']
+user_keys = ["name","age","sex","phone"]
+
+intent = []
+targets = []
+entities = []
+resp_text = []
 
 
 def respond(intent = None, targets = None, entities = None, user = None, \
 	type = None, title = None):
 
-	resp_text = []
-	intent = []
-	targets = []
+	print('Incoming input to response: ')
+	print("Intent = " +str(intent))
+	print("Targets = " +str(targets))
+	print("Entities = " +str(entities))
+
+	resp = dict.fromkeys(input_keys)
 
 	if(type == "message"):
 		intent_m = []
@@ -57,36 +65,51 @@ def respond(intent = None, targets = None, entities = None, user = None, \
 		print("Targets messages = " + str(targets_m))
 
 	elif(type == "story"):
-		if(title != None):
-			for m_id in stories[title]["messages"]:
-				
-				# resp_text += "\n\n" + messages[str(m_id)]["text"]
-				resp_text.append(messages[str(m_id)]["text"])
-				intent.append(stories[title]["return_intent"])
-				targets.append(stories[title]["return_targets"])
+		for s_name in stories.keys():
+			
+			# print("     Testing story: " + s_name)
 
-				intent.append(stories[title]["return_intent"][0])
+			story = stories[s_name]
 
-				intent = list(set(intent))
-				# targets = list(set(targets.append(stories[title]["return_targets"])))
+			# print("     Comparison = " + str(sorted(story["targets"]) == sorted(targets)))
 
-				resp = dict.fromkeys(input_keys)
+			if(len(targets) >0):
 
-				resp["user_id"] = user["phone"]
-				resp["session_id"] = 1           # TODO - change this later
-				resp["tags"] = intent + [t for t in targets]
-				resp["intent"] = intent
-				resp["targets"] = targets
-				resp["text"] = resp_text
-				resp["timestamp"] = time.time()
+				resp_text = []
+
+				if(sorted(story["targets"]) == sorted(targets)):
+
+					print("     Serving story: " + s_name)
+
+					for m_id in story["messages"]:
+
+						resp_text.append(messages[str(m_id)]["text"])
+					
+					intent = story["return_intent"]
+					targets = story["return_targets"]
+					embed = messages[str(m_id)]["embed"]
+
+					intent = list(set(intent))
+					targets = list(set(targets))
+
+
+					resp["user_id"] = user["phone"]
+					resp["session_id"] = 1           # TODO - change this later
+					resp["return_tags"] = list(set(intent + [t for t in targets]))
+					resp["return_intent"] = intent
+					resp["return_targets"] = targets
+					resp["text"] = resp_text
+					resp["timestamp"] = time.time()
+					resp["embed"] = embed
+
+					# Reset intents, targets and tags
+
+					intent = []
+					targets = []
+					entities = []
+					resp_text = [] 
+
 	else:
-		resp = dict.fromkeys(intput_keys)
 		resp["text"] = "No match"
-
-
+		
 	return resp
-
-
-
-
-respond(user = dict.fromkeys(user_keys), type = "story", title = "first_welcome")
