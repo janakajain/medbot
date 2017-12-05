@@ -1,0 +1,204 @@
+[
+	{
+		"1":{
+			"_id": 1,
+			"title": "introduction",
+			"targets": ["welcome"],
+			"intent": ["hello"],
+			"text": "👋😄 Hello! I am MediBo. Your personal medical chatbot.",
+			"entities": ["medibo","chatbot"],
+			"tags": ["hello","yourself"],
+			"weights": 
+				{	
+				"information": 0,
+				"remedy": 0,
+				"general": 1,
+				"query": 0,
+				"leadgen":0
+				},
+			"embed": []
+		},
+		
+		"2":{
+			"_id": 2,
+			"title": "description",
+			"targets": ["welcome"],
+			"intent": ["description"],
+			"text": "I am here to keep you healthy by keeping a track of your 💊",
+			"entities": ["medibo","chatbot"],
+			"tags": ["medicines"],
+			"weights": 
+				{
+					"information": 0,
+					"remedy": 0,
+					"general": 1,
+					"query": 0,
+					"leadgen": 0
+				},
+			"embed": []
+		},
+		
+		"3":{
+			"_id": 3,
+			"title": "onboarding",
+			"targets": ["onboarding","register"],
+			"intent": ["onboarding"],
+			"text": "Let's get started, shall we? 🙂",
+			"entities": ["start","begin","register"],
+			"tags": ["register","medibo"],
+			"weights": 
+				{
+					"information": 0,
+					"remedy": 0,
+					"general": 1,
+					"query": 0,
+					"leadgen":0
+				},
+			"embed": []
+		},
+		
+		"4":{
+			"_id": 4,
+			"title": "what-is-your-name",
+			"targets": ["demog","name"],
+			"intent": ["leadgen"],
+			"text": "They call me MediBo (🏥 + 🤖). What do they call you?",
+			"entities": ["medibo","call"],
+			"tags": ["name","leadgen","medibo"],
+			"weights": 
+				{
+					"information": 0,
+					"remedy": 0,
+					"general": 1,
+					"query": 0,
+					"leadgen":1
+				},
+			"embed": []
+		},
+		
+		"5":{
+			"_id": 5,
+			"title": "what-is-your-age",
+			"targets": ["demog","age"],
+			"intent": ["leadgen"],
+			"text": "Nice to meet you %s! How old are you?",
+			"entities": ["age","leadgen"],
+			"tags": ["age","leadgen"],
+			"weights": 
+				{
+					"information": 0,
+					"remedy": 0,
+					"general": 1,
+					"query": 0,
+					"leadgen":1
+				},
+			"embed": ["name"]
+		},
+		
+		"6":{
+			"_id": 6,
+			"title": "what-is-your-sex",
+			"targets": ["demog","sex"],
+			"intent": ["leadgen"],
+			"text": "Got it. If I may ask, what is your sex?",
+			"entities": ["sex","leadgen"],
+			"tags": ["register","sex","leadgen"],
+			"weights": 
+				{
+					"information": 0,
+					"remedy": 0,
+					"general": 1,
+					"query": 0,
+					"leadgen":1
+				},
+			"embed": []
+		},
+		
+		"7":{
+			"_id": 7,
+			"title": "do-you-have-symptom",
+			"targets": ["demog","allergies"],
+			"intent": ["leadgen"],
+			"text": "Do you have any allergies I should be aware of?",
+			"entities": ["allergy","allergies"],
+			"tags": ["symptom","symptoms","allergies","allergy"],
+			"weights": 
+				{
+					"information": 0,
+					"remedy": 0,
+					"general": 0,
+					"query": 1,
+					"leadgen":0
+				},
+			"embed": []
+		},
+	
+		"8":{
+			"_id": 8,
+			"title": "common-symptom",
+			"targets": ["response"],
+			"intent": ["response"],
+			"text": "Your symptom is common and not one to worry about. If it persists, call your doctor.",
+			"weights": 
+				{
+					"information": 1,
+					"remedy": 0,
+					"general": 0,
+					"query": 0,
+					"leadgen":0
+				},
+			"embed": []
+		},
+
+		"9":{
+			"_id": 9,
+			"title": "doctor-symptom",
+			"targets": ["response"],
+			"intent": ["response"],
+			"text": "I advise you to contact your physician. The symptoms may be serious.",
+			"weights": 
+				{
+					"information": 1,
+					"remedy": 0,
+					"general": 0,
+					"query": 0,
+					"leadgen":0
+				},
+			"embed": []
+		},
+
+		"10":{
+			"_id": 10,
+			"title": "emergency-symptom",
+			"targets": ["response"],
+			"intent": ["response"],
+			"text": "%s, I advise you to contact 911 immediately. The symptoms may be deadly.",
+			"weights": 
+				{
+					"information": 1,
+					"remedy": 0,
+					"general": 0,
+					"query": 0,
+					"leadgen":0
+				},
+			"embed": ["name"]
+		},
+
+		"11":{
+			"_id": 11,
+			"title": "onboarding-complete",
+			"targets": ["demog","complete"],
+			"intent": ["complete"],
+			"text": "You're all set %s, Welcome to MediBo!",
+			"weights": 
+				{
+					"information": 1,
+					"remedy": 0,
+					"general": 1,
+					"query": 0,
+					"leadgen":0
+				},
+			"embed": ["name"]
+		}
+	}
+]

@@ -1,0 +1,28 @@
+[
+	{		
+		"+17868777177": {
+			"name": "Andrew",
+			"age": 42,
+			"sex": "male",
+			"phone": "+17868777177",
+			"allergies": []
+		},
+
+		"+19518010312": {
+			"name": "Minghong",
+			"age": 23,
+			"sex": "female",
+			"phone": "+19518010312",
+			"allergies": []
+		},
+
+		"+18056377924": {
+			"name": "Shengyang",
+			"age": 25,
+			"sex": "male",
+			"phone": "+18056377924",
+			"allergies": []
+		}
+	}
+
+]

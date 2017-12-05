@@ -1,0 +1,53 @@
+[
+	{
+		"first_welcome": {
+			"_id":1,
+			"title": "welcome",
+			"targets": ["welcome","onboarding","register"],
+			"intent": ["hello","description","onboarding","leadgen"],
+			"messages": [1,2,3,4],
+			"return_intent":["name"],
+			"return_targets": ["name","demog"]
+		},
+
+		"onboarding_age": {
+			"_id": 3,
+			"title": "onboarding_age",
+			"targets": ["demog","name"],
+			"intent": ["leadgen"],
+			"messages": [5],
+			"return_intent":["leadgen"],
+			"return_targets": ["age","demog"]
+		},
+
+		"onboarding_sex": {
+			"_id": 4,
+			"title": "onboarding_sex",
+			"targets": ["demog","age"],
+			"intent": ["leadgen"],
+			"messages": [6],
+			"return_intent":["leadgen"],
+			"return_targets": ["sex","demog"]
+		},
+
+		"onboarding_allergies": {
+			"_id": 5,
+			"title": "onboarding_allergies",
+			"targets": ["demog","sex"],
+			"intent": ["leadgen"],
+			"messages": [7],
+			"return_intent":["leadgen"],
+			"return_targets": ["allergies","demog"]
+		},
+
+		"onboarding_complete": {
+			"_id": 5,
+			"title": "onboarding_complete",
+			"targets": ["demog","allergies"],
+			"intent": ["leadgen"],
+			"messages": [11],
+			"return_intent":["leadgen"],
+			"return_targets": ["complete","demog"]
+		}
+	}
+]
