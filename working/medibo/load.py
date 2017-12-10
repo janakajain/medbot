@@ -17,6 +17,9 @@ def load_json(file=None):
 
 	if(file == None):
 		return None
+	elif(file=='users'):
+		with open('data/'+file+'.json') as f:
+			file = json.load(f)
 	else:
 		with open('data/'+file+'.json') as f:
 			file = json.load(f)[0]

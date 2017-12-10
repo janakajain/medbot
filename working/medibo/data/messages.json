@@ -116,12 +116,12 @@
 		
 		"7":{
 			"_id": 7,
-			"title": "do-you-have-symptom",
-			"targets": ["demog","allergies"],
+			"title": "current-medication",
+			"targets": ["demog","medicines"],
 			"intent": ["leadgen"],
-			"text": "Do you have any allergies I should be aware of?",
-			"entities": ["allergy","allergies"],
-			"tags": ["symptom","symptoms","allergies","allergy"],
+			"text": "What are the current medications that you are taking?",
+			"entities": ["medication","medicine"],
+			"tags": ["symptom","symptoms","medication","medicine"],
 			"weights": 
 				{
 					"information": 0,
@@ -136,7 +136,7 @@
 		"8":{
 			"_id": 8,
 			"title": "common-symptom",
-			"targets": ["response"],
+			"targets": ["response","common"],
 			"intent": ["response"],
 			"text": "Your symptom is common and not one to worry about. If it persists, call your doctor.",
 			"weights": 
@@ -153,7 +153,7 @@
 		"9":{
 			"_id": 9,
 			"title": "doctor-symptom",
-			"targets": ["response"],
+			"targets": ["response","serious"],
 			"intent": ["response"],
 			"text": "I advise you to contact your physician. The symptoms may be serious.",
 			"weights": 
@@ -170,7 +170,7 @@
 		"10":{
 			"_id": 10,
 			"title": "emergency-symptom",
-			"targets": ["response"],
+			"targets": ["response","emergency"],
 			"intent": ["response"],
 			"text": "%s, I advise you to contact 911 immediately. The symptoms may be deadly.",
 			"weights": 
@@ -196,6 +196,125 @@
 					"remedy": 0,
 					"general": 1,
 					"query": 0,
+					"leadgen":0
+				},
+			"embed": ["name"]
+		},
+
+		"12":{
+			"_id": 12,
+			"title": "how-are-you-feeling-today",
+			"targets": ["general","hello"],
+			"intent": ["greeting"],
+			"text": "Tell me %s, how can I help you today?",
+			"weights": 
+				{
+					"information": 0,
+					"remedy": 0,
+					"general": 1,
+					"query": 0,
+					"leadgen":0
+				},
+			"embed": ["name"]
+		},
+
+		"13":{
+			"_id": 13,
+			"title": "hello-user",
+			"targets": ["hi","hello","medibo","bonjour","greetings"],
+			"intent": ["greeting"],
+			"text": "🤗 Hi there! How can I help you?",
+			"weights": 
+				{
+					"information": 0,
+					"remedy": 0,
+					"general": 1,
+					"query": 0,
+					"leadgen":0
+				},
+			"embed": []
+		},
+
+		"14":{
+			"_id": 14,
+			"title": "add-request-successful",
+			"targets": ["add","request","successful"],
+			"intent": ["confirmation"],
+			"text": "Done! 🤓 Here's how your updated record looks like:",
+			"weights": 
+				{
+					"information": 1,
+					"remedy": 0,
+					"general": 1,
+					"query": 0,
+					"leadgen":0
+				},
+			"embed": []
+		},
+
+		"15":{
+			"_id": 15,
+			"title": "add-request-successful",
+			"targets": ["request","confusion"],
+			"intent": ["confusion"],
+			"text": "Err.. I don't think I understand. 🧐 Could you try telling it to me differently?",
+			"weights": 
+				{
+					"information": 1,
+					"remedy": 0,
+					"general": 1,
+					"query": 1,
+					"leadgen":0
+				},
+			"embed": []
+		},
+
+		"16":{
+			"_id": 16,
+			"title": "display-entity",
+			"targets": ["show","name","phone","medication","age","sex","show","tell","see","describe","display","list","enlist"],
+			"intent": ["request"],
+			"text": "Sure. Here is what's in my record 📜 for your requested information: ",
+			"weights": 
+				{
+					"information": 1,
+					"remedy": 0,
+					"general": 1,
+					"query": 1,
+					"leadgen":0
+				},
+			"embed": []
+		},
+
+		"17":{
+			"_id": 17,
+			"title": "tell-joke",
+			"targets": ["joke","funny"],
+			"intent": ["request"],
+			"text": "Q: Did you hear about the optometrist that fell into his lens grinding machine? \n\n A: He made a spectacle 👓 of himself \n\n\n  🤣",
+			"weights": 
+				{
+					"information": 0,
+					"remedy": 0,
+					"general": 1,
+					"query": 1,
+					"leadgen":0
+				},
+			"embed": []
+		},
+
+		"18":{
+			"_id": 18,
+			"title": "you-are-welcome",
+			"targets": ["thanks","thank","you"],
+			"intent": ["general"],
+			"text": "You are most welcome %s. \n\nLet me know if I can help you with anything else anytime. 😊",
+			"weights": 
+				{
+					"information": 0,
+					"remedy": 0,
+					"general": 1,
+					"query": 1,
 					"leadgen":0
 				},
 			"embed": ["name"]

@@ -11,7 +11,7 @@
 		},
 
 		"onboarding_age": {
-			"_id": 3,
+			"_id": 2,
 			"title": "onboarding_age",
 			"targets": ["demog","name"],
 			"intent": ["leadgen"],
@@ -21,7 +21,7 @@
 		},
 
 		"onboarding_sex": {
-			"_id": 4,
+			"_id": 3,
 			"title": "onboarding_sex",
 			"targets": ["demog","age"],
 			"intent": ["leadgen"],
@@ -30,24 +30,34 @@
 			"return_targets": ["sex","demog"]
 		},
 
-		"onboarding_allergies": {
-			"_id": 5,
-			"title": "onboarding_allergies",
+		"onboarding_medication": {
+			"_id": 4,
+			"title": "onboarding_medication",
 			"targets": ["demog","sex"],
 			"intent": ["leadgen"],
 			"messages": [7],
 			"return_intent":["leadgen"],
-			"return_targets": ["allergies","demog"]
+			"return_targets": ["medication","demog"]
 		},
 
 		"onboarding_complete": {
 			"_id": 5,
 			"title": "onboarding_complete",
-			"targets": ["demog","allergies"],
+			"targets": ["demog","medication"],
 			"intent": ["leadgen"],
-			"messages": [11],
+			"messages": [11,12],
 			"return_intent":["leadgen"],
 			"return_targets": ["complete","demog"]
+		},
+
+		"greeting_general": {
+			"_id": 6,
+			"title": "greeting_general",
+			"targets": ["hi","hello","medibo","chatbot","machine","ssup"],
+			"intent": ["greeting"],
+			"messages": [13],
+			"return_intent":["request"],
+			"return_targets": ["symptoms","request"]
 		}
 	}
 ]

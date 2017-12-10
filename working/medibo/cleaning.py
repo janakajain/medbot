@@ -59,7 +59,9 @@ def spell_check(x):
 		Returns: str
 	'''
 
-	return spell(x)
+	# return spell(x)
+
+	return x
 
 
 def clean(x):
